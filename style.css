@@ -17,7 +17,6 @@ html {
 
 body {
   font-family: Quicksand, sans-serif;
-  padding: 20px;
   color: #333;
 }
 
@@ -133,11 +132,19 @@ label {
 }
 
 @media (min-width: 425px) {
+  body {
+    padding: 20px;
+  }
+
   .accordion-container {
     max-width: 600px;
   }
 
   .description img.mc-image {
     width: 210px;
+  }
+
+  .accordion:hover {
+    transform: scale(1.009);
   }
 }
