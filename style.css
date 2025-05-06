@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url("./img/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  max-width: 600px;
+  color: #ffc600;
+  text-shadow: 2px 2px 5px black;
+}
+
+.accordion-container {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.accordion {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.accordion.expanded {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title-section {
+  padding: 15px 40px 15px 15px;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  background: #f0f0f0;
+}
+
+.description {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+}
+
+.accordion.expanded .description {
+  display: block;
+}
+
+.description img.mc-image {
+  float: left;
+  width: 180px;
+  height: auto;
+  margin: 4px 15px 10px 0;
+  border-radius: 4px;
+}
+
+.expand-icon,
+.collapse-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.expand-icon {
+  display: inline;
+}
+
+.collapse-icon {
+  display: none;
+}
+
+.accordion.expanded .expand-icon {
+  display: none;
+}
+
+.accordion.expanded .collapse-icon {
+  display: inline;
+}
+
+.multi-select {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.multi-select input {
+  margin-right: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+
+label {
+  color: #ffc600;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px black;
+}
+
+@media (max-width: 424px) {
+  .description img.mc-image {
+    float: none;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .accordion-container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 425px) {
+  body {
+    padding: 20px;
+  }
+
+  .accordion-container {
+    max-width: 600px;
+  }
+
+  .description img.mc-image {
+    width: 210px;
+  }
+
+  .accordion:hover {
+    transform: scale(1.009);
+  }
+}
