@@ -80,7 +80,7 @@ npm test
 
 * This project uses **CommonJS** for test compatibility (`module.exports` / `require`).
 * Tests run in a simulated DOM using **jsdom**, not a real browser.
-* Ensure your Node.js version supports ES6+ features (Node v14+ recommended).
+* Ensure your Node.js version supports ES6+ features (Node v18 recommended).
 
 ---
 
